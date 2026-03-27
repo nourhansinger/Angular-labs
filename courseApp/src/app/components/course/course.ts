@@ -1,14 +1,18 @@
 import { Component } from '@angular/core';
 import { ICourse } from '../../models/icourse';
 import { ICategory } from '../../models/icategory';
+import { FormsModule } from '@angular/forms';
+import { NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-course',
-  imports: [],
+  imports: [FormsModule, NgStyle],
   templateUrl: './course.html',
   styleUrl: './course.css',
 })
 export class Course {
+
+  selectedCat: number = 0;
   courses: ICourse[] = [
     {
       "id": 1,
@@ -17,7 +21,7 @@ export class Course {
       "instructor": "John Doe",
       "price": 49.99,
       "imageUrl": "web.jpg",
-      "seats": 20,
+      "seats": 4,
       "categoryId": 1
     },
     {
@@ -27,7 +31,7 @@ export class Course {
       "instructor": "Jane Smith",
       "price": 99.99,
       "imageUrl": "data.jpg",
-      "seats": 15,
+      "seats": 3,
       "categoryId": 2
     },
     {
@@ -37,7 +41,7 @@ export class Course {
       "instructor": "Alex Johnson",
       "price": 29.99,
       "imageUrl": "ui.png",
-      "seats": 25,
+      "seats": 4,
       "categoryId": 3
     },
     {
@@ -47,7 +51,7 @@ export class Course {
       "instructor": "Chris Lee",
       "price": 79.99,
       "imageUrl": "react.webp",
-      "seats": 10,
+      "seats": 3,
       "categoryId": 4
     }
   ]

@@ -1,3 +1,22 @@
+.custom-select {
+  border-radius: 25px;
+  padding: 12px 15px;
+  border: none;
+  background-color: #f8f9fa;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: 0.3s;
+}
+
+.custom-select:hover {
+  background-color: #e9ecef;
+}
+
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 8px rgba(17, 133, 108, 0.6);
+}
+
+
 .card {
   height: 100%;
   border: none;
