@@ -1,0 +1,15 @@
+<h1>Welcome Back!</h1>
+
+<div class="student-list">
+  @for(student of newStudents; track student.id)
+  {
+    <div class="card" style="width: 18rem;">
+      <img [src]="student.photoUrl" class="card-img-top" [alt]="student.name" />
+      <div class="card-body">
+        <h5 class="card-title">{{student.name}}</h5>
+        <p class="card-text">Hello, my name is {{student.name}} and I am {{student.age}} years old.</p>
+        <a href="#" class="btn btn-primary">For more information</a>
+      </div>
+    </div>
+  }
+</div>

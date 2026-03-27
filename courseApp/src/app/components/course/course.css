@@ -1,0 +1,61 @@
+.card {
+  height: 100%;
+  border: none;
+  border-radius: 16px;
+  overflow: hidden;
+  transition: 0.3s;
+  background-color: #ffffff;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+}
+
+
+.card-title {
+  font-weight: bold;
+  font-size: 18px;
+  color: #11856c;
+  margin-bottom: 10px;
+}
+
+
+.desc {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.info p {
+  margin: 0;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+}
+
+.register-btn {
+  background: linear-gradient(135deg, #11856c, #1abc9c);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 10px;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.register-btn:hover {
+  background: linear-gradient(135deg, #0e6b57, #16a085);
+}
