@@ -1,27 +1,27 @@
 <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
-
   @for(course of courses; track course.id)
   {
-    <div class="col d-flex">
-  <div class="card w-100">
-    <img [src]="course.imageUrl" class="card-img-top" alt="...">
+  <div class="col d-flex">
+    <div class="card w-100">
+      <img [src]="course.imageUrl" class="card-img-top" alt="...">
 
-    <div class="card-body d-flex flex-column">
-      <h5 class="card-title">{{ course.title }}</h5>
+      <div class="card-body d-flex flex-column">
+        <h5 class="card-title">{{ course.title }}</h5>
 
-      <p class="card-text desc">
-        {{ course.description }}
-      </p>
+        <p class="card-text desc">
+          {{ course.description }}
+        </p>
 
-      <div class="info">
-        <p><strong>Instructor:</strong> {{ course.instructor }}</p>
-        <p><strong>Seats Available:</strong> {{ course.seats }}</p>
+        <div class="info">
+          <p><strong>Instructor:</strong> {{ course.instructor }}</p>
+          <p><strong>Seats Available:</strong> {{ course.seats }}</p>
+        </div>
+
+        <button class="btn register-btn mt-auto" (click)="register(course)" [disabled]="course.seats == 0">Register
+          Now</button>
       </div>
-
-      <button class="btn register-btn mt-auto" (click)="register(course)" [disabled]="course.seats == 0">Register Now</button>
     </div>
   </div>
-</div>
   }
-  
+
 </div>

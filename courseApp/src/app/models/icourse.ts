@@ -5,6 +5,6 @@ export interface ICourse {
     instructor: string,
     price: number,
     imageUrl: string,
-    seats : number
-    rating: number
+    seats: number,
+    categoryId: number
 }
