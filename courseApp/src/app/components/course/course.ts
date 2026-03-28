@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { ICourse } from '../../models/icourse';
 import { ICategory } from '../../models/icategory';
 import { FormsModule } from '@angular/forms';
-import { NgStyle } from '@angular/common';
-
+import { CurrencyPipe, NgStyle } from '@angular/common';
+import { AppDisableAfterClick } from '../../directives/app-disable-after-click';
+import { DiscountPipe } from '../../pipes/discount-pipe';
 @Component({
   selector: 'app-course',
-  imports: [FormsModule, NgStyle],
+  imports: [FormsModule, NgStyle, AppDisableAfterClick, DiscountPipe , CurrencyPipe],
   templateUrl: './course.html',
   styleUrl: './course.css',
 })
@@ -19,7 +20,7 @@ export class Course {
       "title": "Introduction to Web Development",
       "description": "Learn the basics of HTML, CSS, and JavaScript to build your first website.",
       "instructor": "John Doe",
-      "price": 49.99,
+      "price": 8000,
       "imageUrl": "web.jpg",
       "seats": 4,
       "categoryId": 1
@@ -29,7 +30,7 @@ export class Course {
       "title": "Data Science with Python",
       "description": "A comprehensive guide to data analysis, machine learning, and data visualization using Python.",
       "instructor": "Jane Smith",
-      "price": 99.99,
+      "price": 10000,
       "imageUrl": "data.jpg",
       "seats": 3,
       "categoryId": 2
@@ -39,7 +40,7 @@ export class Course {
       "title": "UI/UX Design Fundamentals",
       "description": "Master the principles of user interface and user experience design.",
       "instructor": "Alex Johnson",
-      "price": 29.99,
+      "price": 6000,
       "imageUrl": "ui.png",
       "seats": 4,
       "categoryId": 3
@@ -49,7 +50,7 @@ export class Course {
       "title": "Mobile App Development with React Native",
       "description": "Build cross-platform mobile applications using JavaScript and React.",
       "instructor": "Chris Lee",
-      "price": 79.99,
+      "price": 7000,
       "imageUrl": "react.webp",
       "seats": 3,
       "categoryId": 4
@@ -77,7 +78,6 @@ export class Course {
   register(course: ICourse) {
     if (course.seats > 0) {
       course.seats--;
-      alert(`You have registered for ${course.title}`);
     } else {
       alert(`Sorry, ${course.title} is full.`);
     }
